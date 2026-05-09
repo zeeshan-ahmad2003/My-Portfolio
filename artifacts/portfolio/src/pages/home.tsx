@@ -315,9 +315,9 @@ export default function Home() {
               },
               {
                 title: "PDF Compressor",
-                desc: "A utility tool that compresses PDF files while preserving document quality and structure. Reduces file sizes significantly using intelligent compression algorithms, making it easy to share and upload large documents. Built with Python and PDF processing libraries.",
-                tags: ["Python", "PDF Processing", "File Compression", "Utility Tool"],
-                link: "#"
+                desc: "A Streamlit web application that compresses PDF files by 60–70% using Ghostscript's powerful compression engine — built entirely in Python with no HTML or CSS. Supports files up to 200MB with four quality levels (Screen, Ebook, Printer, Prepress). Deployed live on Streamlit Cloud, free forever. Built from scratch in 2 days.",
+                tags: ["Python", "Streamlit", "Ghostscript", "PyMuPDF", "Streamlit Cloud"],
+                link: "https://zeeshans-pdf-tool.streamlit.app"
               }
             ].map((project, idx) => (
               <motion.div 

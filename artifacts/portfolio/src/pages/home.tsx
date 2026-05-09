@@ -309,8 +309,8 @@ export default function Home() {
             {[
               {
                 title: "YouTube Video Summarizer",
-                desc: "Final project for the KP IT Board ML & DeepLearning.AI course. Automatically extracts transcripts from YouTube videos and uses large language models to generate concise, structured summaries — saving hours of watching time. Built with Python, the YouTube Data API, and LLM-powered text summarization.",
-                tags: ["Python", "YouTube API", "LLMs", "NLP", "DeepLearning.AI"],
+                desc: "An AI-powered web application built on a RAG (Retrieval-Augmented Generation) pipeline. Users paste any YouTube URL, the app fetches the full transcript via the YouTube Transcript API, then sends it to Groq's LLaMA model which generates a clean, structured summary in seconds — saving hours of watching time. Presented as final project for KP IT Board ML & DeepLearning.AI course.",
+                tags: ["Python", "Groq AI", "LLaMA", "Flask", "RAG", "YouTube Transcript API"],
                 link: "#"
               },
               {

@@ -308,15 +308,15 @@ export default function Home() {
             
             {[
               {
-                title: "AI Blog Writing Agent with Multi-Agent Workflow",
-                desc: "Autonomous blog generation using LangGraph, multi-agent orchestration, research integration, structured planning, parallel section writing, and automated image generation. Generates complete technical blogs with embedded diagrams and exported Markdown files.",
-                tags: ["LangGraph", "Multi-Agent", "LLMs", "Python"],
+                title: "YouTube Video Summarizer",
+                desc: "Final project for the KP IT Board ML & DeepLearning.AI course. Automatically extracts transcripts from YouTube videos and uses large language models to generate concise, structured summaries — saving hours of watching time. Built with Python, the YouTube Data API, and LLM-powered text summarization.",
+                tags: ["Python", "YouTube API", "LLMs", "NLP", "DeepLearning.AI"],
                 link: "#"
               },
               {
-                title: "Agentic AI Chatbot with Persistent Memory",
-                desc: "Production-style LLM-powered chatbot using LangGraph and SQLite with persistent memory. Supports GPT-like contextual conversations and dynamic tool invocation (stock price retrieval, calculator) through structured agent workflows.",
-                tags: ["LangGraph", "SQLite", "Tool-Oriented Reasoning", "RAG"],
+                title: "PDF Compressor",
+                desc: "A utility tool that compresses PDF files while preserving document quality and structure. Reduces file sizes significantly using intelligent compression algorithms, making it easy to share and upload large documents. Built with Python and PDF processing libraries.",
+                tags: ["Python", "PDF Processing", "File Compression", "Utility Tool"],
                 link: "#"
               }
             ].map((project, idx) => (

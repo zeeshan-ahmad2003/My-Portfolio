@@ -364,18 +364,6 @@ export default function Home() {
             
             {[
               {
-                title: "Machine Learning Specialization",
-                issuer: "Stanford University & DeepLearning.AI / Coursera",
-                date: "2025",
-                cred: "TRTRG8OIWZHZ"
-              },
-              {
-                title: "Google Data Analytics Professional",
-                issuer: "Google / Coursera",
-                date: "2025",
-                cred: "ZYMV6LEHDSJW"
-              },
-              {
                 title: "KP IT Board ML & DeepLearning",
                 issuer: "KP IT Board & DeepLearning.AI",
                 date: "2026",

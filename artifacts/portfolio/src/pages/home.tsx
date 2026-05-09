@@ -81,7 +81,7 @@ function SectionHeading({ title, icon: Icon }: { title: string, icon: any }) {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
+    <div className="min-h-screen text-foreground selection:bg-primary/30" style={{ background: "transparent" }}>
       <AnimatedBackground />
       <NavBar />
       

@@ -190,4 +190,9 @@
   .glow-border {
     box-shadow: 0 0 15px hsla(180, 100%, 50%, 0.3);
   }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
 }

@@ -212,13 +212,48 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative aspect-square max-w-md mx-auto w-full"
+              className="relative max-w-xs mx-auto w-full flex items-center justify-center"
             >
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl mix-blend-screen animate-pulse"></div>
-              <div className="relative h-full w-full rounded-2xl border border-primary/30 bg-card overflow-hidden flex items-center justify-center glow-border">
-                <BrainCircuit className="w-32 h-32 text-primary opacity-50" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+              {/* Spinning glow ring */}
+              <div className="absolute inset-0 rounded-full"
+                style={{
+                  background: "conic-gradient(from 0deg, rgba(6,220,130,0.7), rgba(0,200,255,0.3), rgba(6,220,130,0.7))",
+                  filter: "blur(8px)",
+                  animation: "spin 6s linear infinite",
+                  borderRadius: "50%",
+                }}
+              />
+              {/* Outer glow blob */}
+              <div className="absolute inset-4 bg-primary/20 rounded-full blur-2xl animate-pulse" />
+              {/* Photo circle */}
+              <div style={{
+                width: 280, height: 280, borderRadius: "50%",
+                border: "3px solid rgba(6,220,130,0.65)",
+                overflow: "hidden", position: "relative",
+                boxShadow: "0 0 40px rgba(6,220,130,0.25)",
+                flexShrink: 0,
+              }}>
+                <img
+                  src="/zeeshan-photo.jpg"
+                  alt="Zeeshan Ahmad"
+                  style={{
+                    width: "100%", height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center top",
+                    filter: "contrast(1.12) brightness(1.1) saturate(1.05)",
+                  }}
+                />
               </div>
+              {/* Live dot */}
+              <div style={{
+                position: "absolute", bottom: 16, right: 16,
+                width: 20, height: 20, borderRadius: "50%",
+                background: "rgba(6,220,130,1)",
+                border: "3px solid #050a0e",
+                boxShadow: "0 0 12px rgba(6,220,130,0.9)",
+              }}
+                className="animate-pulse"
+              />
             </motion.div>
           </div>
         </section>

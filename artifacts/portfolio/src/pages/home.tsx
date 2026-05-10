@@ -14,7 +14,9 @@ import {
   Github, 
   ChevronDown,
   ExternalLink,
-  ChevronRight
+  ChevronRight,
+  Copy,
+  Check
 } from "lucide-react";
 import { 
   SiCplusplus, 
@@ -80,6 +82,14 @@ function SectionHeading({ title, icon: Icon }: { title: string, icon: any }) {
 }
 
 export default function Home() {
+  const [copied, setCopied] = useState(false);
+
+  const copyLink = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <div className="min-h-screen text-foreground selection:bg-primary/30" style={{ background: "transparent" }}>
       <AnimatedBackground />
@@ -140,6 +150,19 @@ export default function Home() {
             <a href="https://github.com/zeeshan-ahmad2003" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-md bg-secondary text-secondary-foreground font-bold hover:bg-secondary/80 border border-border transition-colors flex items-center gap-2">
               <Github className="w-5 h-5" /> GitHub Logs
             </a>
+            <button
+              onClick={copyLink}
+              className="px-6 py-3 rounded-md font-bold border transition-all duration-200 flex items-center gap-2"
+              style={{
+                background: copied ? "rgba(6,220,130,0.15)" : "rgba(6,220,130,0.07)",
+                borderColor: copied ? "rgba(6,220,130,0.8)" : "rgba(6,220,130,0.35)",
+                color: copied ? "rgba(6,220,130,1)" : "rgba(6,220,130,0.8)",
+                boxShadow: copied ? "0 0 16px rgba(6,220,130,0.25)" : "none",
+              }}
+            >
+              {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
+              {copied ? "Copied!" : "Copy Link"}
+            </button>
           </motion.div>
           
           <motion.div 

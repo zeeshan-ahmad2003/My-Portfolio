@@ -38,7 +38,7 @@ export function PhotoPro() {
                 width: "100%", height: "100%",
                 objectFit: "cover",
                 objectPosition: "center top",
-                filter: "contrast(1.08) brightness(1.05) saturate(1.1)",
+                filter: "contrast(1.15) brightness(1.18) saturate(1.1) drop-shadow(0 0 8px rgba(6,220,130,0.15))",
               }}
             />
           </div>

@@ -83,6 +83,14 @@ function SectionHeading({ title, icon: Icon }: { title: string, icon: any }) {
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
+  const [visitors, setVisitors] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch("https://api.counterapi.dev/v1/zeeshan-ahmad-portfolio/visits/up")
+      .then((r) => r.json())
+      .then((d) => setVisitors(d.count))
+      .catch(() => setVisitors(null));
+  }, []);
 
   const copyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -450,8 +458,19 @@ export default function Home() {
 
       </main>
 
-      <footer className="border-t border-border py-8 text-center text-sm font-mono text-muted-foreground bg-background">
+      <footer className="border-t border-border py-8 text-center text-sm font-mono text-muted-foreground" style={{ background: "transparent" }}>
         <p>&copy; {new Date().getFullYear()} Zeeshan Ahmad. All systems functional.</p>
+        {visitors !== null && (
+          <p className="mt-2 flex items-center justify-center gap-2">
+            <span
+              className="inline-block w-2 h-2 rounded-full animate-pulse"
+              style={{ background: "rgba(6,220,130,0.9)" }}
+            />
+            <span style={{ color: "rgba(6,220,130,0.7)" }}>
+              {visitors.toLocaleString()} visitor{visitors !== 1 ? "s" : ""} and counting
+            </span>
+          </p>
+        )}
       </footer>
     </div>
   );

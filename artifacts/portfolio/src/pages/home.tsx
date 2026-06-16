@@ -26,7 +26,10 @@ import {
   SiMongodb, 
   SiGit, 
   SiGithub, 
-  SiGooglecolab 
+  SiGooglecolab,
+  SiFlutter,
+  SiDart,
+  SiAndroidstudio
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
@@ -272,7 +275,7 @@ export default function Home() {
                 current: true
               },
               {
-                degree: "FSc (Pre-Engineering/CS)",
+                degree: "FSc Pre-Medical",
                 inst: "Edwardes College Peshawar",
                 year: "2023",
                 detail: "Marks: 932 / A1 Grade",
@@ -318,8 +321,13 @@ export default function Home() {
             {[
               {
                 title: "Languages",
-                items: ["C++", "Java", "Python", "HTML"],
-                icons: [SiCplusplus, FaJava, SiPython, SiHtml5]
+                items: ["C++", "Java", "Python", "Dart", "HTML", "CSS"],
+                icons: [SiCplusplus, FaJava, SiPython, SiDart, SiHtml5]
+              },
+              {
+                title: "Mobile & Web",
+                items: ["Flutter", "Android Studio", "HTML", "CSS"],
+                icons: [SiFlutter, SiAndroidstudio]
               },
               {
                 title: "AI & ML",
@@ -328,13 +336,13 @@ export default function Home() {
               },
               {
                 title: "Databases",
-                items: ["MySQL", "SQL Server", "MongoDB"],
+                items: ["MySQL", "MongoDB"],
                 icons: [SiMysql, SiMongodb]
               },
               {
                 title: "Tools",
-                items: ["Git", "GitHub", "VS Code", "Google Colab"],
-                icons: [SiGit, SiGithub, Code2, SiGooglecolab]
+                items: ["Git", "GitHub", "VS Code", "Android Studio", "Google Colab", "MS Office"],
+                icons: [SiGit, SiGithub, Code2, SiAndroidstudio, SiGooglecolab]
               }
             ].map((category, idx) => (
               <motion.div 
@@ -373,6 +381,12 @@ export default function Home() {
           <div className="space-y-12">
             
             {[
+              {
+                title: "Portfolio Mobile App",
+                desc: "A professional 5-screen mobile portfolio app built during my internship at Codiora Software House. Features login authentication, a profile screen, projects showcase, and contact screen. Tested on Chrome, a real Android device (Vivo Y55), and Android Emulator — fully functional on all platforms.",
+                tags: ["Flutter", "Dart", "Android Studio", "Mobile Dev", "Codiora Internship"],
+                link: "#"
+              },
               {
                 title: "YouTube Video Summarizer",
                 desc: "An AI-powered web application built on a RAG (Retrieval-Augmented Generation) pipeline. Users paste any YouTube URL, the app fetches the full transcript via the YouTube Transcript API, then sends it to Groq's LLaMA model which generates a clean, structured summary in seconds — saving hours of watching time. Presented as final project for KP IT Board ML & DeepLearning.AI course.",
@@ -430,10 +444,16 @@ export default function Home() {
             
             {[
               {
-                title: "KP IT Board ML & DeepLearning",
+                title: "ML & DeepLearning.AI",
                 issuer: "KP IT Board & DeepLearning.AI",
                 date: "2026",
                 cred: "In Progress"
+              },
+              {
+                title: "App Development Internship",
+                issuer: "Codiora Software House",
+                date: "2026",
+                cred: "Completed"
               }
             ].map((cert, idx) => (
               <motion.div 

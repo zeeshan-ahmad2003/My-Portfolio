@@ -16,7 +16,8 @@ import {
   ExternalLink,
   ChevronRight,
   Copy,
-  Check
+  Check,
+  Download
 } from "lucide-react";
 import { 
   SiCplusplus, 
@@ -160,6 +161,18 @@ export default function Home() {
             </a>
             <a href="https://github.com/zeeshan-ahmad2003" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-md bg-secondary text-secondary-foreground font-bold hover:bg-secondary/80 border border-border transition-colors flex items-center gap-2">
               <Github className="w-5 h-5" /> GitHub Logs
+            </a>
+            <a
+              href="/Zeeshan_Ahmad_CV.docx"
+              download="Zeeshan_Ahmad_CV.docx"
+              className="px-6 py-3 rounded-md font-bold border transition-all duration-200 flex items-center gap-2"
+              style={{
+                background: "rgba(0,200,255,0.07)",
+                borderColor: "rgba(0,200,255,0.35)",
+                color: "rgba(0,200,255,0.9)",
+              }}
+            >
+              <Download className="w-5 h-5" /> Download CV
             </a>
             <button
               onClick={copyLink}
